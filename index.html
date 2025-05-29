@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
+<style>
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+</style>
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karthik Chandran - Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -10,7 +18,7 @@
 
 <body class="bg-gray-900 text-gray-100">
   <div class="max-w-4xl mx-auto py-10 px-6 bg-gray-800 shadow-md mt-10 rounded-xl">
-    <header class="text-center mb-8">
+    <header class="text-center mb-8 animate-fadeIn">
       <h1 class="text-3xl font-bold">Karthik Chandran Lakshmanasamy</h1>
       <p class="text-sm">Fairfax, VA | 571-530-9600 | karthik1029@gmail.com | 
         <a href="https://www.linkedin.com/in/karthik-chandran-lakshmanasamy-a7232094/" target="_blank" class="text-blue-400 underline">LinkedIn</a> | 
@@ -18,48 +26,24 @@
       </p>
     </header>
 
-    <section class="mb-6">
+    <section class="mb-6 animate-fadeIn">
       <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Experience</h2>
       <div class="mt-4">
         <h3 class="font-bold">Principal Software Engineer in Test</h3>
-        <p class="text-sm italic">MicroStrategy, Tysons, VA — May 2023 – Present</p>
+        <p class="text-sm italic">MicroStrategy, Tysons, VA (May 2023 – Present)</p>
         <ul class="list-disc list-inside mt-2 text-sm space-y-1">
-  <li>Developed backend automation using WebdriverIO to improve coverage and reduce testing time.</li>
-  <li>Implemented TensorFlow to validate Retrieval-Augmented Generation (RAG) features.</li>
-  <li>Automated Kubernetes service checks using AWS CodeBuild.</li>
-  <li>Built Jenkins CI pipeline for regression prevention.</li>
-  <li>Validated SQL accuracy between MicroStrategy and Tableau via a Universal Semantic Layer framework.</li>
-  <li>Built Python concurrency test framework for event-driven data models.</li>
-  <li>Led 4 junior engineers to enhance LRU Cache performance with 90% test coverage.</li>
-</ul>
+          <li>Developed backend automation using WebdriverIO to improve coverage and reduce testing time.</li>
+          <li>Implemented TensorFlow to validate Retrieval-Augmented Generation (RAG) features.</li>
+          <li>Automated Kubernetes service checks using AWS CodeBuild.</li>
+          <li>Built Jenkins CI pipeline for regression prevention.</li>
+          <li>Validated SQL accuracy between MicroStrategy and Tableau via a Universal Semantic Layer framework.</li>
+          <li>Built Python concurrency test framework for event-driven data models.</li>
+          <li>Led 4 junior engineers to enhance LRU Cache performance with 90% test coverage.</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="mb-6">
-  <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Licenses & Certifications</h2>
-  <div class="mt-2">
-    <div class="flex items-start space-x-4 mt-4">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/ISTQB_Logo.png" alt="ISTQB Logo" class="w-10 h-10 mt-1">
-          <div>
-            <p class="font-semibold text-sm">Certified Tester Foundation Level (CTFL)</p>
-            <p class="text-xs text-gray-300">Issued by ISTQB · Jul 2020</p>
-            <p class="text-xs text-gray-300">Credential ID: 20-CTFL-00908-USA</p>
-            <a href="https://atsqa.org/documents/certificates/7a842b9138f541ecab2eff63181b5cda-certificate.pdf" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
-          </div>
-        </div>
-          <div class="flex items-start space-x-4 mt-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank Logo" class="w-10 h-10 mt-1">
-            <div>
-              <p class="font-semibold text-sm">Python (HackerRank)</p>
-              <p class="text-xs text-gray-300">Issued by HackerRank · Sep 2024</p>
-              <p class="text-xs text-gray-300">Credential ID: bf94de25f58c</p>
-              <a href="https://www.hackerrank.com/certificates/bf94de25f58c" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
-              
-            </div>
-          </div>
-          </div>
-</section>
-
-<section class="mb-6">
+    <section class="mb-6 animate-fadeIn">
   <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Education</h2>
       <ul class="list-inside list-disc mt-2 text-sm">
         <li>Master of Science in Computer Science, Texas State University (Aug 2013 – May 2016)</li>
@@ -67,7 +51,61 @@
       </ul>
     </section>
 
-    <section>
+    <section class="mb-6">
+      <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Licenses & Certifications</h2>
+      <div class="mt-2">
+        <div class="flex items-start space-x-4 mt-4">
+          <img src="https://atsqa.org/assets/images/badges/CTFL-badge.png" alt="ISTQB Logo" class="w-10 h-10 mt-1">
+          <div>
+            <p class="font-semibold text-sm">Certified Tester Foundation Level (CTFL)</p>
+            <p class="text-xs text-gray-300">Issued by ISTQB · Jul 2020</p>
+            <p class="text-xs text-gray-300">Credential ID: 20-CTFL-00908-USA</p>
+<div class="flex space-x-4 mt-1">
+  <a href="https://atsqa.org/documents/certificates/7a842b9138f541ecab2eff63181b5cda-certificate.pdf" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+  <a href="https://atsqa.org/certified-testers/profile/7b314f0dc38c40d482ae4552892cb6d9" target="_blank" class="text-blue-400 underline text-xs">View Official Badge</a>
+</div>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 mt-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank Logo" class="w-10 h-10 mt-1">
+          <div>
+            <p class="font-semibold text-sm">Python (HackerRank)</p>
+            <p class="text-xs text-gray-300">Issued by HackerRank · Sep 2024</p>
+            <p class="text-xs text-gray-300">Credential ID: bf94de25f58c</p>
+            <a href="https://www.hackerrank.com/certificates/bf94de25f58c" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+          </div>
+        </div>
+      <div class="flex items-start space-x-4 mt-4">
+          <img src="https://www.mongodb.com/assets/images/global/leaf.png" alt="MongoDB Logo" class="w-10 h-10 mt-1">
+          <div>
+            <p class="font-semibold text-sm">MongoDB for SQL Professionals</p>
+            <p class="text-xs text-gray-300">Issued by MongoDB · Oct 2024</p>
+            <p class="text-xs text-gray-300">Credential ID: MDB37h4lqr0fk</p>
+            <a href="https://learn.mongodb.com/c/__2IBNUwSNun2wTVELClYA" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+          </div>
+        </div>
+      <div class="flex items-start space-x-4 mt-4">
+          <img src="https://cdn.brandfetch.io/idSUrLOWbH/w/800/h/840/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B" class="w-10 h-10 mt-1">
+          <div>
+            <p class="font-semibold text-sm">GCP Databricks Platform Architect</p>
+            <p class="text-xs text-gray-300">Issued by Databricks · Sep 2023</p>
+            <p class="text-xs text-gray-300">Credential ID: 82074342</p>
+            <a href="https://credentials.databricks.com/bfb07222-785c-4c73-9872-24c3df09f4eb#acc.gNiwSReO" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+          </div>
+        </div>
+      <div class="flex items-start space-x-4 mt-4">
+          <img src="https://cdn.brandfetch.io/idSUrLOWbH/w/800/h/840/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B" class="w-10 h-10 mt-1">
+          <div>
+            <p class="font-semibold text-sm">Generative AI Fundamentals</p>
+            <p class="text-xs text-gray-300">Issued by Databricks · Sep 2023</p>
+            <p class="text-xs text-gray-300">Credential ID: 82392320</p>
+            <a href="https://credentials.databricks.com/cea5f74c-321d-4412-b1aa-b9f28bf71b2e#acc.tDKjz6qk" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="animate-fadeIn">
       <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Technical Skills</h2>
       <ul class="list-disc list-inside mt-2 text-sm space-y-1">
         <li><strong>Languages:</strong> Python, JavaScript, TypeScript, Java, Bash, Groovy, C++</li>
@@ -79,11 +117,7 @@
         <li><strong>BI/CRM:</strong> MicroStrategy, Tableau, Qlik, Salesforce, ServiceNow, Power BI</li>
       </ul>
     </section>
-
-    
-
-    
   </div>
 </body>
 
-</html> 
+</html>
