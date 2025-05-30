@@ -151,24 +151,26 @@
       background: {
         color: { value: "#0d1117" }
       },
+      fpsLimit: 30,
+      fullScreen: { enable: false },
       particles: {
-        number: { value: 60 },
+        number: { value: 40 },
         color: { value: "#ffffff" },
         links: { enable: false },
         move: {
           enable: true,
-          speed: 1,
+          speed: 0.5,
           direction: "none",
           random: false,
           straight: false,
           outModes: { default: "bounce" }
         },
         size: {
-          value: 2,
+          value: 1.5,
           random: true
         },
         opacity: {
-          value: 0.5
+          value: 0.4
         }
       },
       interactivity: {
