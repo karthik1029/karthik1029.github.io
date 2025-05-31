@@ -32,13 +32,48 @@
       justify-content: center;
       position: relative;
     }
+    .side-nav {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 50;
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .side-nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .side-nav a:hover {
+      color: #f87171;
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
   <div id="tsparticles" class="fixed inset-0 -z-10"></div>
+
+  <!-- Toggle Button -->
+  <button id="toggleNav" class="fixed top-4 left-4 z-50 p-2 bg-gray-700 text-white rounded focus:outline-none">☰</button>
+
+  <!-- Side Navigation -->
+  <nav id="sideNav" class="side-nav">
+    <a href="#top"><span class="text-yellow-400">●</span> Home</a>
+    <a href="#experience"><span class="text-green-400">●</span> Experience</a>
+    <a href="#education"><span class="text-blue-400">●</span> Education</a>
+    <a href="#certifications"><span class="text-purple-400">●</span> Certifications</a>
+    <a href="#projects"><span class="text-pink-400">●</span> Projects</a>
+    <a href="#skills"><span class="text-indigo-400">●</span> Skills</a>
+  </nav>
+
   <div class="max-w-4xl mx-auto py-0 px-6 bg-gray-800 shadow-md mt-0 rounded-xl border border-red-500 overflow-y-scroll h-screen scrollbar-hide" id="scroll-container">
-    <section class="reveal visible text-center relative">
-      <div class="flex justify-between items-center">
+    <section id="top" class="reveal visible text-center relative">
+        <div class="flex justify-between items-center">
         <div class="text-left">
           <h1 class="text-5xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow font-sans">
             Karthik Chandran
@@ -81,8 +116,8 @@
         </div>
       </div>
     </section>
-
-    <section class="reveal" style="min-height:100vh; display:flex; flex-direction:column; justify-content:center;">
+    
+    <section id="experience" class="reveal">
       <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Experience</h2>
       <div class="mt-4">
         <h3 class="font-bold">Principal Software Engineer in Test</h3>
@@ -127,9 +162,9 @@
         </ul>
       </div>
     </section>
-
-    <section class="reveal">
-      <!-- Education content -->
+    
+    <section id="education" class="reveal">
+    <!-- Education content -->
       <h2 class="text-2xl font-semibold border-b border-gray-600 pb-2">Education</h2>
       <ul class="list-inside list-disc mt-2 text-lg">
         <li class="flex items-center space-x-2">
@@ -142,8 +177,9 @@
         </li>
       </ul>
     </section>
-
-    <section class="reveal" style="font-size: 1.25rem;">
+    
+    <section id="certifications" class="reveal">
+    <!-- License and Certification content -->
       <h2 class="text-xl font-semibold border-b border-gray-600 pb-2">Licenses & Certifications</h2>
       <div class="mt-2">
         <div class="flex items-start space-x-4 mt-4">
@@ -152,10 +188,10 @@
             <p class="font-semibold text-lg">Certified Tester Foundation Level (CTFL)</p>
             <p class="text-sm text-gray-300">Issued by ISTQB · Jul 2020</p>
             <p class="text-sm text-gray-300">Credential ID: 20-CTFL-00908-USA</p>
-<div class="flex space-x-4 mt-1">
-  <a href="https://atsqa.org/documents/certificates/7a842b9138f541ecab2eff63181b5cda-certificate.pdf" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
-  <a href="https://atsqa.org/certified-testers/profile/7b314f0dc38c40d482ae4552892cb6d9" target="_blank" class="text-blue-400 underline text-xs">View Official Badge</a>
-</div>
+            <div class="flex space-x-4 mt-1">
+              <a href="https://atsqa.org/documents/certificates/7a842b9138f541ecab2eff63181b5cda-certificate.pdf" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+              <a href="https://atsqa.org/certified-testers/profile/7b314f0dc38c40d482ae4552892cb6d9" target="_blank" class="text-blue-400 underline text-xs">View Official Badge</a>
+            </div>
           </div>
         </div>
         <div class="flex items-start space-x-4 mt-4">
@@ -196,33 +232,33 @@
         </div>
       </div>
     </section>
-
-    <section class="reveal">
-      <!-- Projects content -->
-      <h2 class="text-3xl font-semibold border-b border-gray-600 pb-2">Projects</h2>
-  <div class="mt-2">
-    <div class="flex flex-col space-y-2">
-      <div>
-        <p class="font-semibold text-xl">DataSyncML</p>
-        <p class="text-lg text-gray-300">A robust synchronization pipeline for machine learning data workflows.</p>
-        <a href="https://github.com/karthik1029/DataSyncML" target="_blank" class="text-blue-400 underline text-xs">View on GitHub</a>
-      </div>
-      <div class="mt-4">
-        <p class="font-semibold text-xl">URL Shortener</p>
-        <p class="text-lg text-gray-300">A minimal and efficient URL shortening service using Flask and Redis.</p>
-        <a href="https://github.com/karthik1029/URLShortener" target="_blank" class="text-blue-400 underline text-xs">View on GitHub</a>
-      </div>
-      <div class="mt-4">
-        <p class="font-semibold text-xl">Kafka Data Stream</p>
-        <p class="text-lg text-gray-300">App that streams weather data from an external API to a Kafka topic, and then consumes that data to store it in an InfluxDB time series database.</p>
-        <a href="https://github.com/karthik1029/KafkaDataStream" target="_blank" class="text-blue-400 underline text-xs">View on GitHub</a>
+    
+    <section id="projects" class="reveal">
+    <!-- Projects content -->
+    <h2 class="text-3xl font-semibold border-b border-gray-600 pb-2">Projects</h2>
+    <div class="mt-2">
+      <div class="flex flex-col space-y-2">
+        <div>
+          <p class="font-semibold text-xl">DataSyncML</p>
+          <p class="text-lg text-gray-300">A robust synchronization pipeline for machine learning data workflows.</p>
+          <a href="https://github.com/karthik1029/DataSyncML" target="_blank" class="text-blue-400 underline text-xs">View on GitHub</a>
+        </div>
+        <div class="mt-4">
+          <p class="font-semibold text-xl">URL Shortener</p>
+          <p class="text-lg text-gray-300">A minimal and efficient URL shortening service using Flask and Redis.</p>
+          <a href="https://github.com/karthik1029/URLShortener" target="_blank" class="text-blue-400 underline text-xs">View on GitHub</a>
+        </div>
+        <div class="mt-4">
+          <p class="font-semibold text-xl">Kafka Data Stream</p>
+          <p class="text-lg text-gray-300">App that streams weather data from an external API to a Kafka topic, and then consumes that data to store it in an InfluxDB time series database.</p>
+          <a href="https://github.com/karthik1029/KafkaDataStream" target="_blank" class="text-blue-400 underline text-xs">View on GitHub</a>
+        </div>
       </div>
     </div>
-  </div>
     </section>
-
-    <section class="reveal">
-      <!-- Technical Skills content -->
+    
+    <section id="skills" class="reveal">
+    <!-- Technical Skills content -->
       <h2 class="text-3xl font-semibold border-b border-gray-600 pb-2">Technical Skills</h2>
       <ul class="list-disc list-inside mt-2 text-lg space-y-1">
         <li><strong>Languages:</strong> Python, JavaScript, TypeScript, Java, Bash, Groovy, C++</li>
@@ -238,6 +274,15 @@
 
   <script>
     window.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("toggleNav");
+      const sideNav = document.getElementById("sideNav");
+
+      if (toggleBtn && sideNav) {
+        toggleBtn.addEventListener("click", () => {
+          sideNav.style.display = sideNav.style.display === "flex" ? "none" : "flex";
+        });
+      }
+
       tsParticles.load("tsparticles", {
         background: { color: { value: "#0d1117" } },
         fpsLimit: 30,
