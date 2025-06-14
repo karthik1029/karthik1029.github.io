@@ -379,5 +379,14 @@
       });
     });
   </script>
+  <script>
+  fetch('https://api.countapi.xyz/hit/karthik1029-resume/visits')
+    .then(res => res.json())
+    .then(data => {
+      console.log("Visit Count:", data.value); // Optional: log for debugging
+      // If you want to display it somewhere: 
+      // document.getElementById('visit-count').textContent = `Visits: ${data.value}`;
+    });
+</script>
 </body>
 </html>
