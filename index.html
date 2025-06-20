@@ -6,6 +6,7 @@
   <title>Karthik Chandran - Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
@@ -35,51 +36,108 @@
     .side-nav {
       position: fixed;
       top: 50%;
-      left: 20px;
-      transform: translateY(-50%) translateX(-100%);
-      z-index: 50;
+      left: 1rem;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-      opacity: 0;
-    }
-    .side-nav.active {
-      transform: translateY(-50%) translateX(0);
-      opacity: 1;
+      align-items: flex-start;
+      gap: 1rem;
+      z-index: 50;
     }
     .side-nav a {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 0.5rem;
-      font-size: 0.875rem;
-      color: #fff;
-      transition: color 0.3s, transform 0.3s;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      color: #e5e7eb;
     }
-    .side-nav a:hover {
-      color: #f87171;
-      transform: translateX(5px);
+    .side-nav a .material-icons {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 9999px;
+      background-color: #1f2937;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-size: 1.25rem;
+      box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.03);
+    }
+    .side-nav a.active .material-icons,
+    .side-nav a:hover .material-icons {
+      background-color: #2563eb;
+      color: white;
+    }
+    .side-nav a span.text {
+      display: none;
+      background-color: #2563eb;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      margin-left: -0.5rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .side-nav a:hover span.text {
+      display: inline;
+    }
+    .email-float-button {
+      background-color: rgba(59, 130, 246, 0.6);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 4rem;
+      height: 4rem;
+      font-size: 1.75rem;
+    }
+    .email-float-button:hover {
+      background-color: #3b82f6;
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
   <div id="tsparticles" class="fixed inset-0 -z-10"></div>
 
-  <!-- Toggle Button -->
-  <button id="toggleNav" class="fixed top-4 left-4 z-50 p-2 text-white text-xl rounded focus:outline-none hover:bg-gray-600 transition-all duration-300">☰</button>
-
-  <!-- Side Navigation -->
-  <nav id="sideNav" class="side-nav">
-    <a href="#top"><span class="text-yellow-400">●</span> Home</a>
-    <a href="#experience"><span class="text-green-400">●</span> Experience</a>
-    <a href="#education"><span class="text-blue-400">●</span> Education</a>
-    <a href="#certifications"><span class="text-purple-400">●</span> Certifications</a>
-    <a href="#projects"><span class="text-pink-400">●</span> Projects</a>
-    <a href="#skills"><span class="text-indigo-400">●</span> Skills</a>
-    <a href="#recommendations"><span class="text-red-400">●</span> Recommendations</a>
-    
+  <!-- Vertical Side Navigation -->
+  <nav class="side-nav" id="sideNav">
+    <a href="#top" class="group" data-section="top">
+      <span class="material-icons">home</span>
+      <span class="text">Home</span>
+    </a>
+    <a href="#experience" class="group" data-section="experience">
+      <span class="material-icons">work</span>
+      <span class="text">Experience</span>
+    </a>
+    <a href="#education" class="group" data-section="education">
+      <span class="material-icons">school</span>
+      <span class="text">Education</span>
+    </a>
+    <a href="#certifications" class="group" data-section="certifications">
+      <span class="material-icons">verified</span>
+      <span class="text">Certifications</span>
+    </a>
+    <a href="#projects" class="group" data-section="projects">
+      <span class="material-icons">code</span>
+      <span class="text">Projects</span>
+    </a>
+    <a href="#skills" class="group" data-section="skills">
+      <span class="material-icons">build</span>
+      <span class="text">Skills</span>
+    </a>
+    <a href="#recommendations" class="group" data-section="recommendations">
+      <span class="material-icons">thumb_up</span>
+      <span class="text">Recommendations</span>
+    </a>
+    <a href="mailto:karthik1029@gmail.com?subject=Let's Connect!" class="group">
+      <span class="material-icons">email</span>
+      <span class="text">Email</span>
+    </a>
   </nav>
 
+  <!-- Resume Sections Container -->
   <div class="max-w-4xl mx-auto py-0 px-6 bg-gray-800 shadow-md mt-0 rounded-xl border border-red-500 overflow-y-scroll h-screen scrollbar-hide" id="scroll-container">
     <section id="top" class="reveal visible text-center relative">
         <div class="flex justify-between items-center">
@@ -121,7 +179,6 @@
         </div>
       </div>
     </section>
-    
     <section id="experience" class="reveal">
       <h2 class="text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow font-sans">Experience</h2>
       <div class="mt-4">
@@ -183,7 +240,6 @@
         </ul>
       </div>
     </section>
-    
     <section id="education" class="reveal">
     <!-- Education content -->
       <h2 class="text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow font-sans">Education</h2>
@@ -207,8 +263,6 @@
         
       </ul>
     </section>
-
-    
     <section id="certifications" class="reveal">
     <!-- License and Certification content -->
       <h2 class="text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow font-sans">Licenses & Certifications</h2>
@@ -272,7 +326,6 @@
         </div>
       </div>
     </section>
-    
     <section id="projects" class="reveal">
     <!-- Projects content -->
     <h2 class="text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow font-sans">Projects</h2>
@@ -331,7 +384,6 @@
         </li>
       </ul>
     </section>
-
     <section id="recommendations" class="reveal">
       <h2 class="text-3xl font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text drop-shadow font-sans">Recommendations</h2>
       <div class="mt-4 space-y-6 text-lg">
@@ -361,27 +413,16 @@
         </div>
       </div>
     </section>
-
-    
   </div>
 
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.getElementById("toggleNav");
-      const sideNav = document.getElementById("sideNav");
-
-      if (toggleBtn && sideNav) {
-        toggleBtn.addEventListener("click", () => {
-          sideNav.classList.toggle("active");
-        });
-      }
-
+    document.addEventListener("DOMContentLoaded", () => {
       tsParticles.load("tsparticles", {
         background: { color: { value: "#0d1117" } },
         fpsLimit: 30,
         fullScreen: { enable: false },
         particles: {
-          number: { value: 60 },
+          number: { value: 80 },
           color: { value: "#ffffff" },
           links: {
             enable: true,
@@ -403,12 +444,11 @@
         },
         interactivity: {
           events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" }
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: false }
           },
           modes: {
-            repulse: { distance: 100 },
-            push: { quantity: 4 }
+            grab: { distance: 100, line_linked: { opacity: 1 } }
           }
         },
         detectRetina: true
@@ -416,11 +456,12 @@
 
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
+          const id = entry.target.id;
+          const navLinks = document.querySelectorAll(".side-nav a");
+          navLinks.forEach(link => {
+            link.classList.toggle("active", link.dataset.section === id && entry.isIntersecting);
+          });
+          entry.target.classList.toggle("visible", entry.isIntersecting);
         });
       }, {
         threshold: 0.3
@@ -431,7 +472,5 @@
       });
     });
   </script>
-  <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
 </body>
 </html>
