@@ -51,20 +51,20 @@
       gap: 0.5rem;
       border-radius: 9999px;
       transition: all 0.3s ease;
-      background-color: transparent;
+      /* background-color: transparent; */
+      background-color: rgba(255, 255, 255, 0.03); /* Light outer layer */
+      padding: 0.3rem 0.6rem; /* Oval outer background */
       color: #e5e7eb;
     }
     .side-nav a .material-icons {
       width: 2.5rem;
       height: 2.5rem;
-      border-radius: 9999px;
+      border-radius: 9999px; /* Perfect circle */
       background-color: #1f2937;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
       font-size: 1.25rem;
-      box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.03);
     }
     .side-nav a.active .material-icons,
     .side-nav a:hover .material-icons {
@@ -491,7 +491,7 @@
           entry.target.classList.toggle("visible", entry.isIntersecting);
         });
       }, {
-        threshold: 0.3
+        threshold: 0.8
       });
 
       document.querySelectorAll(".reveal").forEach(section => {
