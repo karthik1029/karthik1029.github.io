@@ -443,12 +443,13 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      const particleCount = window.innerWidth < 640 ? 20 : 60;
       tsParticles.load("tsparticles", {
         background: { color: { value: "#0d1117" } },
         fpsLimit: 30,
         fullScreen: { enable: false },
         particles: {
-          number: { value: 60 },
+          number: { value: particleCount }, // ✅ DYNAMIC COUNT
           color: { value: "#ffffff" },
           links: {
             enable: true,
