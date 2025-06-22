@@ -145,39 +145,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Vertical Side Navigation -->
   <nav class="side-nav" id="sideNav">
-    <a href="#top" class="group" data-section="top">
+    <a href="#top" class="group" data-section="top"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Home' })">
       <span class="material-icons">home</span>
       <span class="text">Home</span>
     </a>
-    <a href="#experience" class="group" data-section="experience">
+    <a href="#experience" class="group" data-section="experience"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Experience' })">
       <span class="material-icons">work</span>
       <span class="text">Experience</span>
     </a>
-    <a href="#education" class="group" data-section="education">
+    <a href="#education" class="group" data-section="education"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Education' })">
       <span class="material-icons">school</span>
       <span class="text">Education</span>
     </a>
-    <a href="#certifications" class="group" data-section="certifications">
+    <a href="#certifications" class="group" data-section="certifications"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Certifications' })">
       <span class="material-icons">verified</span>
       <span class="text">Certifications</span>
     </a>
-    <a href="#projects" class="group" data-section="projects">
+    <a href="#projects" class="group" data-section="projects"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Projects' })">
       <span class="material-icons">code</span>
       <span class="text">Projects</span>
     </a>
-    <a href="#skills" class="group" data-section="skills">
+    <a href="#skills" class="group" data-section="skills"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Skills' })">
       <span class="material-icons">build</span>
       <span class="text">Skills</span>
     </a>
-    <a href="#recommendations" class="group" data-section="recommendations">
+    <a href="#recommendations" class="group" data-section="recommendations"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Recommendations' })">
       <span class="material-icons">thumb_up</span>
       <span class="text">Recommendations</span>
     </a>
-    <a href="mailto:karthik1029@gmail.com?subject=Let's Connect!" class="group">
+    <a href="mailto:karthik1029@gmail.com?subject=Let's Connect!" class="group"
+       onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Email' })">
       <span class="material-icons">email</span>
       <span class="text">Email</span>
     </a>
   </nav>
+
 
   <!-- Resume Sections Container -->
   <div class="max-w-4xl mx-auto py-0 px-6 bg-gray-800 shadow-md mt-0 rounded-xl border border-red-500 overflow-y-scroll h-screen scrollbar-hide" id="scroll-container">
@@ -191,28 +200,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Senior Software Development Engineer in Test
           </h2>
           <p class="text-sm mt-2 text-gray-300 tracking-wide flex flex-wrap items-center gap-2">
-            karthik1029@gmail.com
-          
-            <a href="https://www.linkedin.com/in/karthik-chandran-lakshmanasamy-a7232094/" target="_blank" class="flex items-center text-blue-400 underline hover:text-blue-300 transition duration-300 gap-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 3a2 2 0 110 4 2 2 0 010-4z"/>
-              </svg>
-              LinkedIn
-            </a> |
-          
-            <a href="https://github.com/karthik1029" target="_blank" class="flex items-center text-blue-400 underline hover:text-blue-300 transition duration-300 gap-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577 0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.746.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.107-.774.42-1.305.763-1.605-2.665-.305-5.467-1.332-5.467-5.932 0-1.31.47-2.38 1.237-3.22-.124-.303-.536-1.523.118-3.176 0 0 1.01-.322 3.3 1.23a11.48 11.48 0 013.003-.404c1.02.005 2.045.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.236 1.91 1.236 3.22 0 4.61-2.807 5.624-5.48 5.922.43.37.823 1.1.823 2.22 0 1.604-.014 2.896-.014 3.29 0 .32.192.694.8.576C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
-              </svg>
-              GitHub
-            </a> |
-            <a href="Resume.pdf" download target="_blank" class="flex items-center text-blue-400 underline hover:text-blue-300 transition duration-300 gap-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-              </svg>
-              Resume
-            </a>
+          karthik1029@gmail.com
+        
+          <a href="https://www.linkedin.com/in/karthik-chandran-lakshmanasamy-a7232094/"
+             target="_blank"
+             onclick="gtag('event', 'linkedin_click', { event_category: 'engagement', event_label: 'LinkedIn Profile' })"
+             class="flex items-center text-blue-400 underline hover:text-blue-300 transition duration-300 gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 3a2 2 0 110 4 2 2 0 010-4z"/>
+            </svg>
+            LinkedIn
+          </a> |
+        
+          <a href="https://github.com/karthik1029"
+             target="_blank"
+             onclick="gtag('event', 'github_click', { event_category: 'engagement', event_label: 'GitHub Profile' })"
+             class="flex items-center text-blue-400 underline hover:text-blue-300 transition duration-300 gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577 0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.746.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.107-.774.42-1.305.763-1.605-2.665-.305-5.467-1.332-5.467-5.932 0-1.31.47-2.38 1.237-3.22-.124-.303-.536-1.523.118-3.176 0 0 1.01-.322 3.3 1.23a11.48 11.48 0 013.003-.404c1.02.005 2.045.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.236 1.91 1.236 3.22 0 4.61-2.807 5.624-5.48 5.922.43.37.823 1.1.823 2.22 0 1.604-.014 2.896-.014 3.29 0 .32.192.694.8.576C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a> |
+        
+          <a href="Resume.pdf"
+             download
+             target="_blank"
+             onclick="gtag('event', 'download_resume', { event_category: 'engagement', event_label: 'Resume.pdf' })"
+             class="flex items-center text-blue-400 underline hover:text-blue-300 transition duration-300 gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+            </svg>
+            Resume
+          </a>
           </p>
         </div>
         <!-- Side Metrics -->
@@ -329,12 +349,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="flex items-start space-x-4 mt-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="w-16 h-16 mt-1">
+          <div>
+            <p class="font-semibold text-lg">Generative AI</p>
+            <p class="text-sm text-gray-300">Issued by Google · Jun 2023</p>
+            <p class="text-sm text-gray-300">Credential ID: 3894693</p>
+            <a href="https://www.cloudskillsboost.google/public_profiles/425695e8-f68f-4d54-a60e-432da9e1c8b9/badges/3894693?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+        </div>
+        </div>
+        <div class="flex items-start space-x-4 mt-4">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank Logo" class="w-16 h-16 mt-1">
           <div>
-            <p class="font-semibold text-lg">Python (HackerRank)</p>
+            <p class="font-semibold text-lg">Python</p>
             <p class="text-sm text-gray-300">Issued by HackerRank · Sep 2024</p>
             <p class="text-sm text-gray-300">Credential ID: bf94de25f58c</p>
             <a href="https://www.hackerrank.com/certificates/bf94de25f58c" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 mt-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank Logo" class="w-16 h-16 mt-1">
+          <div>
+            <p class="font-semibold text-lg">JavaScript</p>
+            <p class="text-sm text-gray-300">Issued by HackerRank · Jun 2025</p>
+            <p class="text-sm text-gray-300">Credential ID: 79afbfc807dc</p>
+            <a href="https://www.hackerrank.com/certificates/79afbfc807dc" target="_blank" class="text-blue-400 underline text-xs">View Certificate</a>
           </div>
         </div>
       <div class="flex items-start space-x-4 mt-4">
